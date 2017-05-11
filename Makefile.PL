@@ -12,6 +12,9 @@ $pkg->install('hook_op_check.h');
 $pkg->add_xs('Check.xs');
 $pkg->add_pm('lib/B/Hooks/OP/Check.pm' => '$(INST_LIB)/B/Hooks/OP/Check.pm');
 
+mkdir 'build';
+$pkg->save_config('build/IFiles.pm');
+
 WriteMakefile(
     NAME => 'B::Hooks::OP::Check',
     VERSION_FROM => 'lib/B/Hooks/OP/Check.pm',
