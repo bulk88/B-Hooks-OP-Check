@@ -1,7 +1,7 @@
 use strict;
 use warnings;
-
 package B::Hooks::OP::Check;
+# ABSTRACT: Wrap OP check callbacks
 
 require 5.008001;
 use parent qw/DynaLoader/;
@@ -15,10 +15,6 @@ __PACKAGE__->bootstrap($VERSION);
 1;
 
 __END__
-
-=head1 NAME
-
-B::Hooks::OP::Check - Wrap OP check callbacks
 
 =head1 SYNOPSIS
 
@@ -79,17 +75,5 @@ on.
 =head2 void *hook_op_check_remove (opcode type, hook_op_check_id id)
 
 Remove the callback identified by C<id>. Returns the userdata the callback had.
-
-=head1 AUTHOR
-
-Florian Ragwitz E<lt>rafl@debian.orgE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (c) 2008 Florian Ragwitz
-
-This module is free software.
-
-You may distribute this code under the same terms as Perl itself.
 
 =cut

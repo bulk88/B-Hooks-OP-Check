@@ -1,3 +1,8 @@
+Revision history for B-Hooks-OP-Check
+
+{{$NEXT}}
+  * convert packaging to Dist::Zilla (fixes RT#120431)
+
 0.19      2011-09-10 19:10:00Z
   * Fix hooking protocol, which was broken in a way that could result in losing
     checkers hooked in by other modules.
