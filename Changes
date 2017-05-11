@@ -1,5 +1,7 @@
 Revision history for B-Hooks-OP-Check
 
+{{$NEXT}}
+
 0.21      2017-05-11 14:19:03Z
   * re-add the creation of B/Hooks/OP/Check/Install/Files.pm to installation
 
