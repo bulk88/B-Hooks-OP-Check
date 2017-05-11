@@ -39,7 +39,7 @@ __END__
 
 =head1 DESCRIPTION
 
-This module provides a c api for XS modules to hook into the callbacks of
+This module provides a C API for XS modules to hook into the callbacks of
 C<PL_check>.
 
 L<ExtUtils::Depends> is used to export all functions for other XS modules to
@@ -52,6 +52,8 @@ use. Include the following in your Makefile.PL:
     );
 
 Your XS module can now include C<hook_op_check.h>.
+
+=for stopwords cb
 
 =head1 TYPES
 
@@ -74,6 +76,6 @@ on.
 
 =head2 void *hook_op_check_remove (opcode type, hook_op_check_id id)
 
-Remove the callback identified by C<id>. Returns the userdata the callback had.
+Remove the callback identified by C<id>. Returns the user_data that the callback had.
 
 =cut
