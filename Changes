@@ -1,5 +1,7 @@
 Revision history for B-Hooks-OP-Check
 
+{{$NEXT}}
+
 0.20      2017-05-11 09:23:49Z
   * convert packaging to Dist::Zilla (fixes RT#120431)
 
