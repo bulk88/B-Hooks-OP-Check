@@ -1,5 +1,7 @@
 Revision history for B-Hooks-OP-Check
 
+{{$NEXT}}
+
 0.22      2017-07-31 16:25:05Z
   * Use cleaner wrap_op_checker() API to control op checking.
   * Use core's Perl_check_t typedef instead of inventing our own.
