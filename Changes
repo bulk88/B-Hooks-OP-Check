@@ -1,6 +1,7 @@
 Revision history for B-Hooks-OP-Check
 
 {{$NEXT}}
+  * Use core's Perl_check_t typedef instead of inventing our own.
 
 0.21      2017-05-11 14:19:03Z
   * re-add the creation of B/Hooks/OP/Check/Install/Files.pm to installation

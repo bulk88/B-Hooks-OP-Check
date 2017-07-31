@@ -6,9 +6,7 @@
 
 #include "hook_op_check.h"
 
-typedef OP *(*orig_check_t) (pTHX_ OP *op);
-
-STATIC orig_check_t orig_PL_check[OP_max];
+STATIC Perl_check_t orig_PL_check[OP_max];
 STATIC AV *check_cbs[OP_max];
 
 #define run_orig_check(type, op) (CALL_FPTR (orig_PL_check[(type)])(aTHX_ op))
