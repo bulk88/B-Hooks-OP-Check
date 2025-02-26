@@ -1,3 +1,4 @@
+#define PERL_NO_GET_CONTEXT
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
@@ -71,6 +72,7 @@ check_cb (pTHX_ OP *op) {
 
 hook_op_check_id
 hook_op_check (opcode type, hook_op_check_cb cb, void *user_data) {
+	dTHX;
 	AV *hooks;
 	SV *hook;
 
@@ -91,6 +93,7 @@ hook_op_check (opcode type, hook_op_check_cb cb, void *user_data) {
 
 void *
 hook_op_check_remove (opcode type, hook_op_check_id id) {
+	dTHXa(NULL);;
 	AV *hooks;
 	I32 i;
 	void *ret = NULL;
@@ -101,6 +104,7 @@ hook_op_check_remove (opcode type, hook_op_check_id id) {
 		return NULL;
 	}
 
+	aTHXa(PERL_GET_THX);
 	for (i = 0; i <= av_len (hooks); i++) {
 		SV **hook = av_fetch (hooks, i, 0);
 
